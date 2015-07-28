@@ -1,3 +1,5 @@
 include_recipe 'git'
 include_recipe 'odi-users'
 include_recipe 'ruby-ng'
+include_recipe 'chef-client::config'
+include_recipe 'chef-client::upstart_service'
