@@ -1,0 +1,81 @@
+DEPENDENCIES
+  chef_csvlint
+    path: .
+    metadata: true
+  envbuilder
+    git: git://github.com/theodi/chef-envbuilder.git
+    revision: a336e6e5a30533859cb81602d4d77d483f933a45
+  odi-monitoring
+    git: git://github.com/theodi/chef-odi-monitoring.git
+    revision: a604cfeff46356effcabe90143513a90b2a25bac
+  odi-pk
+    git: git://github.com/theodi/odi-chef.git
+    revision: 8d51ec42c56ec4f20270627e220c3d0e8ebd6970
+    rel: site-cookbooks/odi-pk
+  odi-users
+    git: git://github.com/theodi/chef-odi-users.git
+    revision: f2eaf79860b0cc866de33dae3d050a660b504714
+  ruby-ng
+    git: git://github.com/3ofcoins/chef-cookbook-ruby-ng.git
+    revision: 5ad116618c2077f83de6ddc968df8fc7f8cd3851
+  serverdensity
+    git: git://github.com/serverdensity/chef-serverdensity.git
+    revision: d03cd8eba2f3f8a0ef80ddcffa5f1d9ed405d3ea
+
+GRAPH
+  apt (2.7.0)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (2.2.3)
+  chef-client (4.3.1)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.37)
+  chef_csvlint (0.0.1)
+    chef-client (>= 0.0.0)
+    envbuilder (>= 0.0.0)
+    git (>= 0.0.0)
+    nginx (>= 0.0.0)
+    odi-monitoring (>= 0.0.0)
+    odi-pk (>= 0.0.0)
+    odi-users (>= 0.0.0)
+    ruby-ng (>= 0.0.0)
+  chef_handler (1.2.0)
+  cron (1.6.1)
+  dmg (2.2.2)
+  dpkg_autostart (0.1.12)
+  envbuilder (1.0.1)
+  git (4.3.3)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  logrotate (1.9.2)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  odi-monitoring (0.1.0)
+    serverdensity (>= 0.0.0)
+  odi-pk (0.1.0)
+  odi-users (0.3.0)
+  ohai (2.0.1)
+  packagecloud (0.0.19)
+  rsyslog (2.1.0)
+  ruby-ng (0.3.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+  runit (1.7.2)
+    packagecloud (>= 0.0.0)
+  serverdensity (2.1.4)
+    apt (~> 2.6)
+    dpkg_autostart (~> 0.1.6)
+    yum (~> 3.3)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)
+  yum (3.6.3)
+  yum-epel (0.6.2)
+    yum (~> 3.2)
