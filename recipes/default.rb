@@ -15,4 +15,21 @@ deploy_revision "/home/#{user}/#{fqdn}" do
   user user
   group group
   revision node['deployment']['revision']
+  action :force_deploy
+  environment(
+    'RACK_ENV' => node['deployment']['rack_env']
+  )
+
+  before_migrate do
+    directory "/home/#{user}/#{fqdn}/shared/config/" do
+      action :create
+      recursive true
+    end
+
+    directory "/home/#{user}/#{fqdn}/shared/log/" do
+      action :create
+      recursive true
+      user user
+    end
+  end
 end
