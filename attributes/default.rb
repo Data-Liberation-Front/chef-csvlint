@@ -5,3 +5,7 @@ default['repo'] = 'theodi/csvlint'
 
 default['deployment']['rack_env'] = 'production'
 default['deployment']['revision'] = 'CURRENT'
+
+default['envbuilder']['base_dir'] = '/home/csvlint'
+default['envbuilder']['owner'] = 'csvlint'
+default['envbuilder']['group'] = 'csvlint'

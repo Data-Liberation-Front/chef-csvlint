@@ -9,6 +9,7 @@ include_recipe 'ruby-ng'
 include_recipe 'chef-client::config'
 include_recipe 'chef-client::upstart_service'
 include_recipe 'odi-monitoring'
+include_recipe 'envbuilder'
 
 deploy_revision "/home/#{user}/#{fqdn}" do
   repo "git://github.com/#{node['repo']}"
@@ -21,6 +22,14 @@ deploy_revision "/home/#{user}/#{fqdn}" do
   )
 
   before_migrate do
+    bash 'Symlink env' do
+      cwd release_path
+      user user
+      code <<-EOF
+        ln -sf /home/#{user}/env .env
+      EOF
+    end
+
     directory "/home/#{user}/#{fqdn}/shared/config/" do
       action :create
       recursive true
