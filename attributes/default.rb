@@ -9,3 +9,5 @@ default['deployment']['revision'] = 'CURRENT'
 default['envbuilder']['base_dir'] = '/home/csvlint'
 default['envbuilder']['owner'] = 'csvlint'
 default['envbuilder']['group'] = 'csvlint'
+
+default['mysql']['database'] = 'csvlint'

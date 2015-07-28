@@ -40,5 +40,15 @@ deploy_revision "/home/#{user}/#{fqdn}" do
       recursive true
       user user
     end
+
+    template "/home/#{user}/#{fqdn}/shared/config/database.yml" do
+      action :create
+      variables(
+        :mysql_host     => node['mysql']['host'],
+        :mysql_database => node['mysql']['database'],
+        :mysql_username => node['mysql']['database'],
+        :mysql_password => node['mysql']['password']
+      )
+    end
   end
 end

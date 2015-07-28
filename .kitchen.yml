@@ -17,3 +17,7 @@ suites:
         environment: csvlint-prod
     run_list:
       - recipe[chef_csvlint::default]
+    attributes:
+      mysql:
+        host: <%= `ipconfig getifaddr en0` %>
+        password: csvlint
