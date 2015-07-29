@@ -21,3 +21,5 @@ suites:
       mysql:
         host: <%= `ipconfig getifaddr en0` %>
         password: csvlint
+      deployment:
+        revision: 68c33721c220f5209313aef7f589cc45d6cc925f

@@ -6,10 +6,13 @@ include_recipe 'git'
 include_recipe 'odi-users'
 include_recipe 'odi-pk'
 include_recipe 'ruby-ng'
+include_recipe 'ruby-ng::dev'
 include_recipe 'chef-client::config'
 include_recipe 'chef-client::upstart_service'
 include_recipe 'odi-monitoring'
 include_recipe 'envbuilder'
+
+include_recipe 'chef_csvlint::dependencies'
 
 deploy_revision "/home/#{user}/#{fqdn}" do
   repo "git://github.com/#{node['repo']}"
@@ -22,6 +25,8 @@ deploy_revision "/home/#{user}/#{fqdn}" do
   )
 
   before_migrate do
+    current_release_directory = release_path
+
     bash 'Symlink env' do
       cwd release_path
       user user
@@ -49,6 +54,10 @@ deploy_revision "/home/#{user}/#{fqdn}" do
         :mysql_username => node['mysql']['database'],
         :mysql_password => node['mysql']['password']
       )
+    end
+
+    bundlify 'csvlint' do
+      cwd current_release_directory
     end
   end
 end
