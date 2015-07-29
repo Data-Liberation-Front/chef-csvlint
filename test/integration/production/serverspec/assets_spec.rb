@@ -1,6 +1,6 @@
 require 'serverspec'
 set :backend, :exec
 
-#describe file '/home/csvlint/csvlint.io/current/public/assets/application.css' do
-#  it { should be_file }
-#end
+describe file '/home/csvlint/csvlint.io/current/public/assets' do
+  it { should be_directory }
+end
