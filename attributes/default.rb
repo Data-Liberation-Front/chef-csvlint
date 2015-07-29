@@ -11,3 +11,4 @@ default['envbuilder']['owner'] = 'csvlint'
 default['envbuilder']['group'] = 'csvlint'
 
 default['mysql']['database'] = 'csvlint'
+default['migrate'] = 'bundle exec rake db:migrate'

@@ -23,6 +23,8 @@ deploy_revision "/home/#{user}/#{fqdn}" do
   environment(
     'RACK_ENV' => node['deployment']['rack_env']
   )
+  migration_command node['migrate']
+  migrate true
 
   before_migrate do
     current_release_directory = release_path
