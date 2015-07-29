@@ -11,6 +11,7 @@ include_recipe 'chef-client::config'
 include_recipe 'chef-client::upstart_service'
 include_recipe 'odi-monitoring'
 include_recipe 'envbuilder'
+include_recipe 'nginx'
 
 include_recipe 'chef_csvlint::dependencies'
 
@@ -71,6 +72,12 @@ deploy_revision "/home/#{user}/#{fqdn}" do
     precompile_assets do
       cwd current_release_directory
       user user
+    end
+
+    foremanise user do
+      cwd current_release_directory
+      port port
+      concurrency concurrency
     end
   end
 end
