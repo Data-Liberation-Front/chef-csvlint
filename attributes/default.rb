@@ -4,6 +4,7 @@ default['fully_qualified_domain_name'] = 'csvlint.io'
 default['repo'] = 'theodi/csvlint'
 default['start_port'] = 3000
 default['concurrency'] = 2
+default['catch_and_redirect'] = ['www.csvlint.io']
 
 default['deployment']['rack_env'] = 'production'
 default['deployment']['revision'] = 'CURRENT'

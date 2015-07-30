@@ -79,5 +79,11 @@ deploy_revision "/home/#{user}/#{fqdn}" do
       port port
       concurrency concurrency
     end
+
+    make_vhosts do
+      cwd current_release_directory
+      user user
+      fqdn fqdn
+    end
   end
 end
