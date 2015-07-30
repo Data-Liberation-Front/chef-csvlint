@@ -17,6 +17,6 @@ describe command 'sudo apt-get install curl && curl --silent -I http://localhost
   its(:stdout) { should match /200 OK/ }
 end
 
-#describe command 'wget -qO- http://localhost' do
-#  its(:stdout) {should match /<title>ODI Open Data Certificate<\/title>/ }
-#end
+describe command 'wget -qO- http://localhost' do
+  its(:stdout) {should match /<title>CSV Lint.*Check your CSV files with CSVLint/ }
+end
