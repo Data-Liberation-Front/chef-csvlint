@@ -5,14 +5,12 @@ upstream <%= @servername %> {
   <% end %>
 }
 
-<% server_name = @fqdn %>
-
 server {
   listen 80 default;
-  server_name <%= server_name %>;
+  server_name <%= @fqdn %>;
   access_log /var/log/nginx/<%= @fqdn %>.log;
   error_log /var/log/nginx/<%= @fqdn %>.err;
-  root /home/csvlint/<%= @fqdn %>/current/public/;
+  root /home/<%= @servername %>/<%= @fqdn %>/current/public/;
 
   location / {
     try_files $uri @backend;
