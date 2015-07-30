@@ -86,4 +86,7 @@ deploy_revision "/home/#{user}/#{fqdn}" do
       fqdn fqdn
     end
   end
+
+  restart_command "sudo service #{user} restart"
+  notifies :restart, "service[nginx]"
 end

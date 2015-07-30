@@ -13,9 +13,9 @@ describe command 'sudo apt-get install curl && curl --silent -I http://localhost
   its(:stdout) { should match /200 OK/ }
 end
 
-#describe command 'sudo apt-get install curl && curl --silent -I http://localhost | grep "200 OK"' do
-#  its(:stdout) { should match /200 OK/ }
-#end
+describe command 'sudo apt-get install curl && curl --silent -I http://localhost | grep "200 OK"' do
+  its(:stdout) { should match /200 OK/ }
+end
 
 #describe command 'wget -qO- http://localhost' do
 #  its(:stdout) {should match /<title>ODI Open Data Certificate<\/title>/ }
