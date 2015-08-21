@@ -31,7 +31,7 @@ GRAPH
     cron (>= 1.2.0)
     logrotate (>= 1.2.0)
     windows (~> 1.37)
-  chef_csvlint (0.0.6)
+  chef_csvlint (0.0.7)
     chef-client (>= 0.0.0)
     envbuilder (>= 0.0.0)
     git (>= 0.0.0)
