@@ -3,7 +3,7 @@ define :precompile_assets, :params => {} do
     cwd params[:cwd]
     user params[:user]
     code <<-EOF
-      bundle exec rake assets:precompile
+      RACK_ENV=production bundle exec rake assets:precompile > /tmp/first_run 2>&1
     EOF
   end
 end

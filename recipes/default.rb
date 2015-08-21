@@ -2,6 +2,7 @@ user = node['user']
 group = node['user']
 fqdn = node['fully_qualified_domain_name']
 
+include_recipe 'apt'
 include_recipe 'git'
 include_recipe 'odi-users'
 include_recipe 'odi-pk'
@@ -20,7 +21,7 @@ deploy_revision "/home/#{user}/#{fqdn}" do
   user user
   group group
   revision node['deployment']['revision']
-  action :force_deploy
+  action :deploy
   environment(
     'RACK_ENV' => node['deployment']['rack_env']
   )

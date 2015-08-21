@@ -1,5 +1,5 @@
 name 'chef_csvlint'
-version '0.0.1'
+version '0.0.5'
 
 depends 'chef-client'
 depends 'ruby-ng'
