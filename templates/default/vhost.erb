@@ -12,6 +12,8 @@ server {
   error_log /var/log/nginx/<%= @fqdn %>.err;
   root /home/<%= @servername %>/<%= @fqdn %>/current/public/;
 
+  client_max_body_size <%= @max_body_size %>;
+
   location / {
     try_files $uri @backend;
   }

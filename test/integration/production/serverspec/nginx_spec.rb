@@ -15,6 +15,5 @@ describe file '/etc/nginx/sites-enabled/csvlint.io' do
   its(:content) { should match /listen 80 default;/ }
   its(:content) { should match /server_name csvlint.io;/ }
   its(:content) { should match /root \/home\/csvlint\/csvlint.io\/current\/public\/;/ }
-#  its(:content) { should match /client_max_body_size 5M;/ }
-#  its(:content) { should match /proxy_pass http:\/\/csvlint;/ }
+  its(:content) { should match /client_max_body_size 5M;/ }
 end

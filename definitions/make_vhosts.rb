@@ -21,7 +21,8 @@ define :make_vhosts, :params => {} do
       :concurrency        => node['concurrency'],
       :fqdn               => node['fully_qualified_domain_name'],
       :prefix             => begin node['deployment']['nginx']['prefix'] rescue nil end,
-      :catch_and_redirect => node['catch_and_redirect']
+      :catch_and_redirect => node['catch_and_redirect'],
+      :max_body_size      => node['max_body_size']
     )
     action :create
   end

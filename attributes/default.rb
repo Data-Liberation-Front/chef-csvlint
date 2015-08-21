@@ -5,6 +5,7 @@ default['repo'] = 'theodi/csvlint'
 default['start_port'] = 3000
 default['concurrency'] = 2
 default['catch_and_redirect'] = ['www.csvlint.io']
+default['max_body_size'] = '5M'
 
 default['deployment']['rack_env'] = 'production'
 default['deployment']['revision'] = 'CURRENT'
