@@ -1,11 +1,4 @@
 name 'chef_csvlint'
 version '0.0.8'
 
-depends 'chef-client'
-depends 'ruby-ng'
-depends 'odi-users'
-depends 'git'
-depends 'envbuilder'
-depends 'odi-pk'
-depends 'odi-monitoring'
-depends 'nginx'
+depends 'skellington'
