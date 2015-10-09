@@ -1,6 +1,6 @@
 default['user'] = 'csvlint'
 default['fully_qualified_domain_name'] = 'csvlint.io'
-default['repo'] = "theodi/#{node['user']}"
+default['repo'] = "#{node['github_org']}/#{node['user']}"
 default['start_port'] = 3000
 default['concurrency'] = 2
 default['concurrency_string'] = "thin=#{node['concurrency']},delayed_job=1"
