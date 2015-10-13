@@ -69,7 +69,7 @@ GRAPH
     apt (~> 2.6)
     dpkg_autostart (~> 0.1.6)
     yum (~> 3.3)
-  skellington (0.1.2)
+  skellington (0.1.4)
     chef-client (>= 0.0.0)
     envbuilder (>= 0.0.0)
     git (>= 0.0.0)
