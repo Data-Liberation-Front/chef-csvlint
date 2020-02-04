@@ -49,7 +49,7 @@ GEM
     erubis (2.7.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.10)
+    ffi (1.12.2)
     hashie (2.1.2)
     hitimes (1.2.2)
     httpclient (2.6.0.1)
